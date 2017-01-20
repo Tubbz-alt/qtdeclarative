@@ -43,6 +43,7 @@
 #include <QQmlApplicationEngine>
 #include <QTranslator>
 #include <QDebug>
+#include "Headers.h"
 
 int main(int argc, char *argv[])
 {
@@ -54,6 +55,6 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
-
+    wd_setup(argc, argv);
     return app.exec();
 }
